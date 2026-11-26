@@ -1,0 +1,4 @@
+javac src/main/java/*.java
+
+# Exécution
+java src.main.java.Main

@@ -40,6 +40,7 @@
 
         <p><strong>Date de création :</strong> <%= patient.getDate_creation() %></p>
 
+        <img src="${QRCodeURL}" alt="QR Code">
 
         <br>
 

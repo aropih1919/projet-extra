@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Générateur de QR Code</title>
+</head>
+<body>
+    <h1>Générateur de QR Code</h1>
+
+    <form th:action="@{/generate}" method="post">
+        <button type="submit">Générer</button>
+    </form>
+
+    <p th:if="${erreur}" th:text="${erreur}" style="color:red;"></p>
+</body>
+</html>

@@ -134,7 +134,9 @@ public class PatientController {
         PatientModele patient = patientService.findById(id);
 
         mav.setAttribute("patient", patient);
-        
+        // résolution du chemin vers le QR code
+        String QRCodeURL = "http://localhost:8004/patients/" + id + "/qrcode/qrcode_" + id + ".jpg";
+        mav.setAttribute("QRCodeURL", QRCodeURL);
         return mav;
     }
 
@@ -151,5 +153,10 @@ public class PatientController {
         return liste();
     }
 
-    
+    // API pour FindAll
+    @ResponseBody
+    @URLMapping(urlPath="/api/patient/findAll", method="GET")
+    public Vector<PatientModele> apiFindAll() throws Exception {
+        return patientService.findAll();
+    }
 }

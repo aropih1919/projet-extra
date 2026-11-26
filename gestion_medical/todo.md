@@ -15,3 +15,8 @@
 - supprimer patient
 
 Problème : dans framework, on utilise forward vers view
+
+## Sprint_2 :  
+Intégration de la notion de CDN et qrcode.
+qrcode fournis par du CDN via apatche2.
+Création d un programme autonome pour la generation des qrcode pour les patients n ayant pas encore de qrCode
